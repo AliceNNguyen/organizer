@@ -1,0 +1,21 @@
+#weather-container{
+  width: 50%;
+  left: 25%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+}
+
+.widget-content{
+  height: 200px;
+}
+
+.front{
+  border-style: solid;
+}
+
+.back{
+  background-color: grey;
+  display: none;
+}

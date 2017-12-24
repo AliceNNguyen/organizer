@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <span>Your Agenda</span>
+  <span></span>
+  <span class="menu">
+    <span class="menu-item"> Studenplan</span>
+    <span class="menu-item">To Do</span>
+    <span class="menu-item">Mails</span>
+  </span>
+</mat-toolbar>
+<div class="header">
+  <h1 class="greeting-text">WELCOME</h1>
+  <!--<mat-card class="weather-container">Munich 11°C</mat-card>-->
+  <app-weather></app-weather>
+</div>
+<div class="agenda">
+  <mat-grid-list cols="2">
+    <mat-grid-tile>Your Time Table</mat-grid-tile>
+    <mat-grid-tile>To Do</mat-grid-tile>
+  </mat-grid-list>
+</div>

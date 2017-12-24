@@ -1,0 +1,58 @@
+*{
+  font-family: Roboto;
+}
+
+.mat-toolbar{
+  text-align: center;
+  background: #2196F3;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.menu-item{
+  padding-right: 10px;
+}
+
+.menu{
+  flex: 1 1 auto;
+}
+
+.greeting-text{
+  font-family: 'Cutive Mono', monospace;
+  font-size: 140px;
+}
+
+header{
+  height: 300px;
+  text-align: center;
+  background-image: url("../assets/images/pattern.jpg");
+}
+
+h1{
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 300;
+  color: white;
+  font-size: 100px;
+  margin: 0;
+  padding-top: 100px;
+}
+
+.header{
+  background-color: #2196F3;
+  min-height: 680px;
+  background-attachment: fixed;
+}
+
+
+.agenda{
+  min-height: 500px;
+}
+
+mat-grid-tile {
+  background-color: #E91E63;
+  color: white;
+  font-size: 50px;
+}
