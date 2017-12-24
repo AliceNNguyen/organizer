@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class DataService {
 
   constructor(public http: Http) {
-    this.name = "munich";
+    this.name = "münchen";
     console.log("data service connected...");
   }
 
