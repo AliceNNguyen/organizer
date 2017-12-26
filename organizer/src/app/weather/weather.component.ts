@@ -22,8 +22,8 @@ export class WeatherComponent implements OnInit {
   toggleWeatherWidget(){
     console.log("click");
     let flipper = document.getElementById("flipper");
-    let front = document.getElementsByClassName("front")[0];
-    let back = document.getElementsByClassName("back")[0];
+    let front = document.getElementsByClassName("front")[0] as HTMLCollectionOf<HTMLElement>;
+    let back = document.getElementsByClassName("back")[0] as HTMLCollectionOf<HTMLElement>;
     flipper.classList.add("flipped");
     back.style.display= "block";
     front.style.display = "none";

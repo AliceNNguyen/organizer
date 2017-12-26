@@ -27,6 +27,16 @@ header{
   background-image: url("../assets/images/pattern.jpg");
 }
 
+.background{
+  background-image: url("../assets/images/mountains.jpg");
+  background-size: cover;
+  height: 250px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+
+}
+
 h1{
   text-align: center;
   font-family: Roboto;
@@ -45,7 +55,7 @@ h1{
 
 
 mat-grid-tile {
-  background-color: #E91E63;
+  background-color: #E1E2E1;
   color: white;
   font-size: 50px;
   min-height: 100%;
