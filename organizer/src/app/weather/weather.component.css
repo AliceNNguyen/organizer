@@ -18,10 +18,15 @@
   backface-visibility: hidden;
 }
 
+.front:hover{
+  cursor: pointer;
+  border-color: #85B4EC;
+}
+
 .back{
   /*background-color: #BBDEFB;*/
   /*background-color: #0086c3;*/
-  background-color: #489BEF;
+  background-color: #85B4EC;
   transform: rotateY( 180deg );
   backface-visibility: hidden;
 

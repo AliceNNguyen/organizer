@@ -15,17 +15,18 @@
   padding-right: 10px;
 }
 
+.menu-item:hover{
+  cursor: pointer;
+  color: #85B4EC;
+}
+
+
 
 .greeting-text{
   font-family: 'Cutive Mono', monospace;
   font-size: 140px;
 }
 
-header{
-  height: 300px;
-  text-align: center;
-  background-image: url("../assets/images/pattern.jpg");
-}
 
 .background{
   background-image: url("../assets/images/mountains.jpg");
@@ -54,12 +55,6 @@ h1{
 }
 
 
-mat-grid-tile {
-  background-color: #E1E2E1;
-  color: white;
-  font-size: 50px;
-  min-height: 100%;
-}
 
 .mail{
   background-color: #00BCD4;
