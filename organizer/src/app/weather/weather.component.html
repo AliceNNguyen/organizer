@@ -1,13 +1,17 @@
 <div id="weather-container">
-  <div class="widget-content front">
-    <h2 class="city-name">München</h2>
-    <h3 class="weather-description">5°C</h3>
-    <h4 class="flip-description">Klicke irgendwo auf dem Widget, um die Stadt zu ändern</h4>
-  </div>
-  <div class="widget-content back">
-    <mat-form-field>
-      <input matInput type="text" />
-  </mat-form-field>
-    <h3 class="input-description">Drücke Enter, um zu bestätigen</h3>
-  </div>
+  <div id="flipper">
+    <div class="widget-content front" (click) = "toggleWeatherWidget()">
+      <h2 class="city-name">{{this.weather.name}}</h2>
+      <h3 class="weather-description">{{this.weather.main.temp + "°C " + this.weather.weather[0].description}}</h3>
+      <h4 class="flip-description">Klicke irgendwo auf dem Widget, um die Stadt zu ändern</h4>
+    </div>
+    <div class="widget-content back">
+      <mat-form-field>
+        <input #input matInput type="text" placeholder="Suche nach Stadt" (keyup.enter) = "onEnter(input.value)">
+      </mat-form-field>
+      <h3 class="input-description">Drücke Enter, um zu bestätigen...</h3>
+      <h4 class="input-description">...oder Esc, um abzubrechen</h4>
+
+    </div>
+</div>
 </div>

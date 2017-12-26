@@ -15,9 +15,6 @@
   padding-right: 10px;
 }
 
-.menu{
-  flex: 1 1 auto;
-}
 
 .greeting-text{
   font-family: 'Cutive Mono', monospace;
@@ -47,12 +44,18 @@ h1{
 }
 
 
-.agenda{
-  min-height: 500px;
-}
-
 mat-grid-tile {
   background-color: #E91E63;
   color: white;
   font-size: 50px;
+  min-height: 100%;
+}
+
+.mail{
+  background-color: #00BCD4;
+  min-height: 500px;
+}
+
+.spacer{
+  flex: 1 1 auto;
 }

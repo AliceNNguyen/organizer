@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatToolbarModule, MatCardModule, MatGridListModule, MatInputModule} from '@angular/material';
+import {MatToolbarModule, MatCardModule, MatGridListModule, MatInputModule, MatButtonModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 
@@ -21,7 +21,8 @@ import { WeatherComponent } from './weather/weather.component';
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <span>Your Agenda</span>
-  <span></span>
+  <span class="spacer"></span>
   <span class="menu">
     <span class="menu-item"> Studenplan</span>
     <span class="menu-item">To Do</span>
@@ -13,8 +13,11 @@
   <app-weather></app-weather>
 </div>
 <div class="agenda">
-  <mat-grid-list cols="2">
-    <mat-grid-tile>Your Time Table</mat-grid-tile>
-    <mat-grid-tile>To Do</mat-grid-tile>
+  <mat-grid-list cols="4">
+    <mat-grid-tile colspan="3">Your Time Table</mat-grid-tile>
+    <mat-grid-tile  colspan="1">To Dos
+      <button mat-fab>Add
+     </button>
+    </mat-grid-tile>
   </mat-grid-list>
 </div>
