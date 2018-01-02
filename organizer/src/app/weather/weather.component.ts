@@ -21,9 +21,9 @@ export class WeatherComponent implements OnInit {
 
   toggleWeatherWidget(){
     console.log("click");
-    let flipper = document.getElementById("flipper");
-    let front = document.getElementsByClassName("front")[0];
-    let back = document.getElementsByClassName("back")[0];
+    let flipper = <HTMLElement>document.getElementById("flipper");
+    let front = <HTMLElement>document.getElementsByClassName("front")[0];
+    let back = <HTMLElement>document.getElementsByClassName("back")[0];
     flipper.classList.add("flipped");
     back.style.display= "block";
     front.style.display = "none";
@@ -31,9 +31,9 @@ export class WeatherComponent implements OnInit {
   }
 
   flipToFront(){
-    let flipper = document.getElementById("flipper");
-    let front = document.getElementsByClassName("front")[0];
-    let back = document.getElementsByClassName("back")[0];
+    let flipper = <HTMLElement>document.getElementById("flipper");
+    let front = <HTMLElement>document.getElementsByClassName("front")[0];
+    let back = <HTMLElement>document.getElementsByClassName("back")[0];
     flipper.classList.remove("flipped");
     back.style.display = "none";
     front.style.display = "block";
@@ -50,9 +50,9 @@ export class WeatherComponent implements OnInit {
   onEsc(){
     document.onkeydown = function(event){
       if ( event.keyCode === 27){
-        let flipper = document.getElementById("flipper");
-        let front = document.getElementsByClassName("front")[0];
-        let back = document.getElementsByClassName("back")[0];
+        let flipper = <HTMLElement>document.getElementById("flipper");
+        let front = <HTMLElement>document.getElementsByClassName("front")[0];
+        let back = <HTMLElement>document.getElementsByClassName("back")[0];
         flipper.classList.remove("flipped");
         back.style.display = "none";
         front.style.display = "block";

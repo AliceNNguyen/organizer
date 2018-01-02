@@ -1,0 +1,21 @@
+.mat-toolbar{
+  text-align: center;
+  background: #2196F3;
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.menu-item{
+  padding-right: 10px;
+}
+
+.menu-item:hover{
+  cursor: pointer;
+  color: #85B4EC;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}

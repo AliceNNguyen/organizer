@@ -1,17 +1,30 @@
 <div class="agenda">
   <mat-grid-list cols="4">
-    <mat-grid-tile colspan="3">Your Time Table</mat-grid-tile>
-    <mat-grid-tile  colspan="1">
-      <div class="to-do-header">{{"You got " + this.toDoCounts + " things to do"}}</div>
+    <mat-grid-tile  id="calendar" colspan="3">Your Time Table</mat-grid-tile>
+    <mat-grid-tile  id="to-do" colspan="1">
+      <div class="to-do-header">{{"You got " + this.toDos.length + " things to do"}}</div>
+      <ul class="to-do-list">
+        <li class="done-{{toDo.done}}" *ngFor="let toDo of toDos">
+          <mat-checkbox  [(ngModel)]="toDo.done"></mat-checkbox>
+          <span class="done-{{toDo.done}}">{{toDo.text}}</span>
+        </li>
+      </ul>
       <mat-form-field class="example-form-field">
-        <input matInput type="text" placeholder="I nedd to..." [(ngModel)]="value"/>
-        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <input  #newToDo matInput type="text" placeholder="I need to..." (keyup.enter)="addToDo(newToDo.value); newToDo.value=' '"/>
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
-      <button class="add-button" mat-mini-fab color="primary">
+      <button class="add-button" mat-mini-fab color="primary" (click)="addToDo(newToDo.value)">
         <mat-icon class="add-icon">add</mat-icon>
       </button>
+      <span class="delete-all">
+        <span>delete completed</span>
+        <button class="delete-button" mat-mini-fab color="primary" (click)="deleteCompleted()">
+          <mat-icon class="delete-icon">delete</mat-icon>
+        </button>
+      </span>
+
     </mat-grid-tile>
   </mat-grid-list>
 </div>

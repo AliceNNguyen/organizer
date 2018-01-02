@@ -30,3 +30,28 @@ mat-grid-tile {
   right: 5%;
   background-color: #85B4EC;
 }
+
+.to-do-list{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  color: grey;
+  font-size: 20px;
+}
+
+li{
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.delete-all{
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  color: grey;
+  font-size: 15px;
+}
+
+.delete-button{
+  background-color: #85B4EC;
+}
