@@ -55,3 +55,9 @@ li{
 .delete-button{
   background-color: #85B4EC;
 }
+
+
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}
