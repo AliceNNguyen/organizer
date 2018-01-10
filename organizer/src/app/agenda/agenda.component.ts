@@ -16,6 +16,8 @@ export class AgendaComponent implements OnInit {
 
 
   ngOnInit() {
+    console.log(JSON.parse(localStorage.getItem("toDoList")));
+    this.toDos = JSON.parse(localStorage.getItem("toDoList"));
   }
 
   addToDo(newToDo:string){
@@ -23,10 +25,26 @@ export class AgendaComponent implements OnInit {
       this.toDos.push({text:newToDo, done:false});
     }
     console.log(this.toDos);
+    localStorage.setItem("toDoList", JSON.stringify(this.toDos));
   }
 
-  onCheck(event){
-    console.log(event);
+  onCheck(){
+    console.log(this.toDos);
+    setTimeout(() => {
+      this.updateLocalStorage();
+    }, 1000);
+
+
+    //localStorage.setItem("toDoList", JSON.stringify(this.toDos));
+
+
+  //  console.log(JSON.parse(localStorage.getItem("toDoList")));
+
+  }
+
+  updateLocalStorage(){
+    localStorage.setItem("toDoList", JSON.stringify(this.toDos));
+    console.log(JSON.parse(localStorage.getItem("toDoList")));
   }
 
   deleteCompleted(){
@@ -35,11 +53,13 @@ export class AgendaComponent implements OnInit {
         this.toDos.splice(index, 1);
       }
     });
-    console.log(this.toDos);
-    let completed = <HTMLElement>document.getElementsByClassName("done-true");
+    let completed = <HTMLCollection>document.getElementsByClassName("done-true");
     while(completed[0]) {
       completed[0].parentNode.removeChild(completed[0]);
     }​
+    console.log(this.toDos);
+    localStorage.setItem("toDoList", JSON.stringify(this.toDos));
+
 
   /*  let completed = <HTMLElement>document.getElementsByClassName("mat-checkbox-checked");
     console.log(completed);

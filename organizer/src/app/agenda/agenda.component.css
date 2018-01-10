@@ -2,7 +2,7 @@ mat-grid-tile {
   background-color: #F5F5F6;
   color: white;
   font-size: 50px;
-  min-height: 80%;
+  min-height: 100%;
 }
 
 .to-do-header{
@@ -60,4 +60,8 @@ li{
 .done-true {
   text-decoration: line-through;
   color: #ddd;
+}
+
+.agenda{
+  height: 600px;
 }

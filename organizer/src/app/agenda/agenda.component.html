@@ -5,7 +5,7 @@
       <div class="to-do-header">{{"You got " + this.toDos.length + " things to do"}}</div>
       <ul class="to-do-list">
         <li class="done-{{toDo.done}}" *ngFor="let toDo of toDos">
-          <mat-checkbox  [(ngModel)]="toDo.done"></mat-checkbox>
+          <mat-checkbox  [(ngModel)]="toDo.done" (click)="onCheck()"></mat-checkbox>
           <span class="done-{{toDo.done}}">{{toDo.text}}</span>
         </li>
       </ul>

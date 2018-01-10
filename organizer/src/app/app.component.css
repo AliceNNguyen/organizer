@@ -33,13 +33,19 @@ h1{
 
 .header{
   background-color: #2196F3;
-  min-height: 680px;
+  min-height: 800px;
   background-attachment: fixed;
 }
-
-
 
 .mail{
   background-color: #00BCD4;
   min-height: 500px;
+}
+
+.mails{
+}
+
+mat-grid-tile{
+  background-color: lightblue;
+  height: 100%;
 }
